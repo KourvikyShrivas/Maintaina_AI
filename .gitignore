@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/*.csv
+data/*.zip
+.pytest_cache/
+.ipynb_checkpoints/
+
+app/streamlit_app_backup.py
+app/streamlit_app_before_text_fix.py

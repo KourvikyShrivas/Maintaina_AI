@@ -1,0 +1,91 @@
+{
+  "project": "Maintaina AI",
+  "dataset": "AI4I 2020 Predictive Maintenance Dataset (UCI id 601, synthetic, CC BY 4.0)",
+  "input_schema": {
+    "air_temperature": "numeric",
+    "process_temperature": "numeric",
+    "rotational_speed": "numeric",
+    "torque": "numeric",
+    "tool_wear": "numeric",
+    "type": "categorical"
+  },
+  "categorical_values_seen": [
+    "H",
+    "L",
+    "M"
+  ],
+  "numeric_ranges_in_training": {
+    "air_temperature": [
+      295.3,
+      304.5
+    ],
+    "process_temperature": [
+      305.7,
+      313.8
+    ],
+    "rotational_speed": [
+      1168.0,
+      2886.0
+    ],
+    "torque": [
+      3.8,
+      76.6
+    ],
+    "tool_wear": [
+      0.0,
+      253.0
+    ]
+  },
+  "numeric_mean": {
+    "air_temperature": 300.00545,
+    "process_temperature": 310.0060625,
+    "rotational_speed": 1539.356875,
+    "torque": 40.0033625,
+    "tool_wear": 107.685
+  },
+  "numeric_std": {
+    "air_temperature": 1.9968440652133048,
+    "process_temperature": 1.4794316766429196,
+    "rotational_speed": 180.98294289362374,
+    "torque": 10.0195455912594,
+    "tool_wear": 63.6120022940206
+  },
+  "uses_engineered_features": true,
+  "cv_pr_auc_raw_vs_engineered": {
+    "raw": 0.742423402360206,
+    "engineered": 0.8914764727736785
+  },
+  "failure_threshold": 0.34,
+  "cost_assumption": {
+    "cost_false_negative": 10,
+    "cost_false_positive": 1,
+    "note": "assumption, not measured from a real plant"
+  },
+  "anomaly": {
+    "alert_rate": 0.03,
+    "score_cutoff": -0.09140707182934414,
+    "note": "unusual-reading flag; NOT a failure probability"
+  },
+  "test_metrics": {
+    "pr_auc": 0.8739787413459019,
+    "roc_auc": 0.9796233710875655,
+    "precision": 0.8636363636363636,
+    "recall": 0.8382352941176471,
+    "f1": 0.8507462686567164,
+    "test_failure_rate": 0.034,
+    "n_test": 2000.0,
+    "n_test_failures": 68.0
+  },
+  "random_seed": 42,
+  "versions": {
+    "python": "3.13.18",
+    "sklearn": "1.9.1",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4"
+  },
+  "limitations": [
+    "Synthetic dataset; real-world performance unknown.",
+    "Tabular snapshots, no time series.",
+    "Decision-support only; not a replacement for inspection."
+  ]
+}
